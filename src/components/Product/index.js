@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { Container, UserSection } from "./styles";
 import productImage from '../../assets/product.png';
+import { Container } from "./styles";
 
 export function Product({ id, name, price, inventory}) {
     return (
         <Container>
-            <Link to={`/${id}`}>
+            <Link to={`/produto/${id}`}>
                 <img src={productImage} alt={name} />
                 <h3>{name}</h3>
                 <section>

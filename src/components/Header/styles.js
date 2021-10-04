@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const UserSection = styled.section`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 5%;
 
     svg {

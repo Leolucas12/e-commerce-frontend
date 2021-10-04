@@ -2,7 +2,9 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import api from "../../services/api";
-import { setProducts } from "../../store/actions/charactersActions";
+import { setProducts } from "../../store/actions/productsActions";
+import { Button } from "../Button";
+import { Input } from "../Input";
 import { Container } from "./styles";
 
 export function SearchInput() {
@@ -20,16 +22,14 @@ export function SearchInput() {
                 console.log("Err: ", err);
             });
 
-            console.log(searchText, response.data)
-
         dispatch(setProducts(response.data));
     }
 
     return (
         <Container>
             <form onSubmit={(e) => fetchProducts(e)}>
-                <input value={searchText} onChange={(e) => setSearchText(e.target.value)} />
-                <button type="submit"><FaSearch /></button>
+                <Input value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+                <Button type="submit"><FaSearch /></Button>
             </form>
         </Container>
     )

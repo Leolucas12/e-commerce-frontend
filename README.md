@@ -1,4 +1,4 @@
-# SWApi-Test
+# E-commerce frontend
 
 ## Iniciando o projeto:
 

@@ -4,7 +4,7 @@ import { Header } from "../components/Header";
 import { NotFound } from "../components/NotFound";
 import { Product } from "../components/Product";
 import api from "../services/api";
-import { setProducts } from "../store/actions/charactersActions";
+import { setProducts } from "../store/actions/productsActions";
 import { Container, Content } from "../styles/Home";
 
 export function Home() {
