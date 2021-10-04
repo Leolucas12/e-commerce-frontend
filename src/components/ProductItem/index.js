@@ -10,7 +10,6 @@ import { useEffect } from "react";
 export function ProductItem({ id, name, price, inventory, creator }) {
     const dispatch = useDispatch();
     const [inCart, setInCart] = useState(false);
-    const cartProducts = JSON.parse(localStorage.getItem('shopping_cart'));
     const reduxCart = useSelector((state) => state.cartProducts.products);
 
     useEffect(() => {
@@ -31,7 +30,7 @@ export function ProductItem({ id, name, price, inventory, creator }) {
             return;
         }
 
-        localStorage.setItem('shopping_cart', JSON.stringify([...cartProducts, product]))
+        localStorage.setItem('shopping_cart', JSON.stringify([...reduxCart, product]))
         dispatch(setCart([...reduxCart, product]));
     }
 
