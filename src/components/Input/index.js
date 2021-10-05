@@ -1,7 +1,7 @@
 import { InputContainer } from "./styles";
 
-export function Input({ value, onChange }) {
+export function Input({ ...props }) {
     return (
-        <InputContainer value={value} onChange={onChange} />
+        <InputContainer {...props} />
     )
 }

@@ -21,7 +21,8 @@ export function Home() {
     }
 
     useEffect(() => {
-        fetchProducts();
+        if (products.length < 1)
+            fetchProducts();
     }, [])
 
     return (

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.button`
     width: 100%;
@@ -10,4 +11,8 @@ export const Container = styled.button`
     cursor: pointer;
     outline: none;
     border: none;
+
+    &:hover {
+        background: ${shade(0.2, '#0984e3')};
+    }
 `;

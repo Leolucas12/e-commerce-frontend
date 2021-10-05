@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import api from "../../services/api";
 import { setProducts } from "../../store/actions/productsActions";
@@ -9,6 +10,7 @@ import { Container } from "./styles";
 
 export function SearchInput() {
     const dispatch = useDispatch();
+    const history = useHistory();
     const [searchText, setSearchText] = useState('');
 
     async function fetchProducts(e) {
@@ -23,6 +25,7 @@ export function SearchInput() {
             });
 
         dispatch(setProducts(response.data));
+        history.push('/');
     }
 
     return (

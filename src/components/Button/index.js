@@ -1,8 +1,8 @@
 import { Container } from "./styles";
 
-export function Button({ children, onClick }) {
+export function Button({ children, ...props }) {
     return (
-        <Container onClick={onClick}>
+        <Container {...props}>
             {children}
         </Container>
     )
