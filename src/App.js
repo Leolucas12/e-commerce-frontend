@@ -10,6 +10,7 @@ import AppProvider from './hooks';
 import { Admin } from './pages/Admin';
 import { EditProduct } from './pages/EditProduct';
 import { NewProduct } from './pages/NewProduct';
+import { Signin } from './pages/Signin';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/produto/:id" component={ProductPage} />
             <Route path="/login" component={Login} />
+            <Route path="/signin" component={Signin} />
             <Route path="/admin/produto/novo" component={NewProduct} isPrivate/>
             <Route path="/admin/produto/:id" component={EditProduct} isPrivate/>
             <Route path="/admin" component={Admin} isPrivate/>

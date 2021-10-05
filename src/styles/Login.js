@@ -17,7 +17,11 @@ export const Content = styled.form`
     align-items: center;
     justify-content: space-between;
     width: 30%;
-    height: 50%;
+    min-height: 50%;
+
+    a {
+        color: #0984e3;
+    }
 
     label, input, button {
         width: 80%;

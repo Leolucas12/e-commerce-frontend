@@ -41,6 +41,7 @@ export function EditProduct() {
 
     const handleSubmit = useCallback(async (e) => {
         e.preventDefault();
+        console.log(tagValues)
         try {
             await api.put(`products/${id}`, {
                 name: name,

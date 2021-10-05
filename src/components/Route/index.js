@@ -14,9 +14,11 @@ const Route = ({
         <ReactDOMRoute
             {...rest}
             render={({ location }) => {
-                if (isPrivate !== user) {
+                if (isPrivate === !!user) {
                     return <Component />
-                } else if (isPrivate && !!user) {
+                } else if (user) {
+                    return <Component />
+                } else if (isPrivate) {
                     return <Redirect
                         to={{
                             pathname: '/login',
